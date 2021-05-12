@@ -13,8 +13,6 @@ namespace Compounds
     public partial class Form1 : Form
     {
         string suit = "";
-        bool thisCondition = false;
-        bool thatCondition = false;
 
         public Form1()
         {
@@ -64,22 +62,18 @@ namespace Compounds
 
         private void thisButton_Click(object sender, EventArgs e)
         {
-            //set thisCondition to opposite of what it currently 
-            //is, and change BackColor to Black for false and 
-            //Goldenrod for true
+            //alternate BackColor between Black and Goldenrod 
         }
 
         private void thatButton_Click(object sender, EventArgs e)
         {
-            //set thatCondition to opposite of what it currently 
-            //is, and change BackColor to Black for false and 
-            //Goldenrod for true
+            //alternate BackColor between Black and Goldenrod 
         }
 
         private void andButton_Click(object sender, EventArgs e)
         {
-            //use compuond if statements to see if both conditions
-            //are true, false, or different
+            //use compound if statements to give outputs based on 
+            //if both colours are the same or different
         }
     }
 }
