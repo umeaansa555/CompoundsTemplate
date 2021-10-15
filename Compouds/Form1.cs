@@ -48,51 +48,114 @@ namespace Compounds
         private void heartButton_Click(object sender, EventArgs e)
         {
             //set suit value
-
+            suit = "hearts";
             //set button colour to goldenrod, (other buttons black)
+            heartButton.BackColor = Color.Goldenrod;
+            diamondButton.BackColor = Color.Black;
+            clubButton.BackColor = Color.Black;
+            spadeButton.BackColor = Color.Black;
         }
 
         private void diamondButton_Click(object sender, EventArgs e)
         {
             //set suit value
-
+            suit = "diamonds";
             //set button colour to goldenrod, (other buttons black)
+            heartButton.BackColor = Color.Black;
+            diamondButton.BackColor = Color.Goldenrod;
+            clubButton.BackColor = Color.Black;
+            spadeButton.BackColor = Color.Black;
         }
 
         private void clubButton_Click(object sender, EventArgs e)
         {
             //set suit value
-
+            suit = "clubs";
             //set button colour to goldenrod, (other buttons black)
+            heartButton.BackColor = Color.Black;
+            diamondButton.BackColor = Color.Black;
+            clubButton.BackColor = Color.Goldenrod;
+            spadeButton.BackColor = Color.Black;
         }
 
         private void spadeButton_Click(object sender, EventArgs e)
         {
             //set suit value
-
+            suit = "clubs";
             //set button colour to goldenrod, (other buttons black)
+            heartButton.BackColor = Color.Black;
+            diamondButton.BackColor = Color.Black;
+            clubButton.BackColor = Color.Black;
+            spadeButton.BackColor = Color.Goldenrod;
         }
 
         private void orButton_Click(object sender, EventArgs e)
         {
             //use compound if statements to check what suit
             //has been selected and output the colour of the suit
+
+
+                //below is the "or" operation. || <-- or symbol is 2 vertical lines
+
+                if(suit == "hearts" || suit == "diamonds")
+                {
+                    suitOutput.Text = "The color is Red";
+                }
+                else if(suit == "clubs" || suit == "spades")
+                {
+                    suitOutput.Text = "The color is Black";
+                }
+
         }
 
         private void thisButton_Click(object sender, EventArgs e)
         {
             //alternate BackColor between Black and Goldenrod 
+            
+            if (thisButton.BackColor == Color.Black)
+            {
+                thisButton.BackColor = Color.Goldenrod;
+            }
+            else
+            {
+                thisButton.BackColor = Color.Black;
+            }
         }
 
         private void thatButton_Click(object sender, EventArgs e)
         {
-            //alternate BackColor between Black and Goldenrod 
+            //alternate BackColor between Black and Goldenrod
+
+            if (thatButton.BackColor == Color.Black)
+            {
+                thatButton.BackColor = Color.Goldenrod;
+            }
+            else
+            {
+                thatButton.BackColor = Color.Black;
+            }
         }
 
         private void andButton_Click(object sender, EventArgs e)
         {
             //use compound if statements to give outputs based on 
             //if both colours are the same or different
+
+
+                //below is the "and" operation. && <--- is the and symbol
+
+                if (thisButton.BackColor == Color.Black && thatButton.BackColor == Color.Black)
+                {
+                    andLabel.Text = "The colors are both black";
+                }
+                else if (thisButton.BackColor == Color.Goldenrod && thatButton.BackColor == Color.Goldenrod)
+                {
+                    andLabel.Text = "The colors are both goldenrod";
+                }
+                else
+                {
+                    andLabel.Text = "The button colors are different";
+                }
         }
     }
 }
