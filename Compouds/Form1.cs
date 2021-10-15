@@ -22,8 +22,27 @@ namespace Compounds
         private void hurricaneButton_Click(object sender, EventArgs e)
         {
             //get the inputted category
+            int category = Convert.ToInt32(categoryInput.Text);
 
             //check the inputted category with a switch block
+            switch (category)
+            {
+                case 1:
+                    categoryOutput.Text = "119-153 km/hr";
+                    break;
+                case 2:
+                    categoryOutput.Text = "154-177 km/hr";
+                    break;
+                case 3:
+                    categoryOutput.Text = "178-209 km/hr";
+                    break;
+                case 4:
+                    categoryOutput.Text = "210-249 km/hr";
+                    break;
+                case 5:
+                    categoryOutput.Text = "greater than 249 km/hr";
+                    break;
+            }
         }
 
         private void heartButton_Click(object sender, EventArgs e)
